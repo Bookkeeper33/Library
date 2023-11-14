@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Library</title>
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <h2>Pocket Library</h2>
+            </div>
+            <div class="add-section">
+                <button class="btn-open">+</button>
+            </div>
+        </header>
+        <main>
+            <div class="card-wrapper"></div>
+        </main>
+        <footer>
+            Copyright &copy; 2023
+            <a href="https://github.com/Bookkeeper33">Bookkeeper33</a
+            ><img src="github-mark.svg" />
+        </footer>
+        <dialog class="modal">
+            <h2>Add new book</h2>
+            <form method="dialog" id="modal-form">
+                <div class="input-container">
+                    <label for="title">
+                        <span>Title</span>
+                        <input
+                            id="title"
+                            type="text"
+                            placeholder="Harry Potter"
+                            name="title"
+                            required
+                            maxlength="100"
+                        />
+                    </label>
+                </div>
+                <div class="input-container">
+                    <label for="author">
+                        <span>Author</span>
+                        <input
+                            id="author"
+                            type="text"
+                            name="author"
+                            placeholder="J.K.Rolling"
+                            required
+                            maxlength="50"
+                        />
+                    </label>
+                </div>
+                <div class="input-container">
+                    <label for="pages">
+                        <span>Pages</span>
+                        <input
+                            id="pages"
+                            type="number"
+                            placeholder="0"
+                            name="pages"
+                            required
+                            min="1"
+                        />
+                    </label>
+                </div>
+                <div class="input-container checkbox">
+                    <label for="read">
+                        <span class="checkmark">Have you read it ?</span>
+                        <input type="checkbox" id="read" name="read-status" />
+                    </label>
+                </div>
+
+                <div id="add">
+                    <button class="btn-submit" autofocus type="submit">
+                        Add to the Library
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        <script defer src="script.js"></script>
+    </body>
+</html>
