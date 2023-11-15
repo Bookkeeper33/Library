@@ -87,6 +87,11 @@ header {
     -webkit-box-shadow: -1px 2px 8px 0px rgba(0, 0, 0, 0.53);
     box-shadow: -1px 2px 8px 0px rgba(0, 0, 0, 0.53);
     cursor: pointer;
+    transition: transform 0.35s ease-in-out;
+}
+
+.btn-open.active {
+    transform: rotate(45deg);
 }
 
 /* Main Section */
@@ -221,7 +226,17 @@ footer img:hover {
 }
 
 .modal[open] {
+    animation: show 1s ease normal;
     -webkit-animation: show 1s ease normal;
+}
+
+@keyframes show {
+    from {
+        transform: translateY(-110%);
+    }
+    to {
+        transform: translateY(0%);
+    }
 }
 
 @-webkit-keyframes show {
