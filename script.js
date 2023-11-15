@@ -102,7 +102,16 @@ Book.prototype.addContent = function (element, content) {
 // event listeners
 openModal.addEventListener("click", () => {
     modal.showModal();
+    openModal.classList.add("active");
 });
+
+modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.close();
+        openModal.classList.remove("active");
+    }
+});
+
 form.addEventListener("submit", (event) => {
     myLibrary.handleForm(event);
 });
