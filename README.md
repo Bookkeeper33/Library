@@ -8,4 +8,6 @@ This project is a part of The Odin Project (https://www.theodinproject.com/lesso
 
 ### Preview
 
+Live preview: https://bookkeeper33.github.io/Library/
+
 ![Project preview](image.png)
